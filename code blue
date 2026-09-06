@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopAdmin - Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-icon">S</div>
+                <span>ShopAdmin</span>
+            </div>
+
+            <nav>
+                <a href="index.html" class="nav-link active">
+                    <span>📊</span>
+                    Dashboard
+                </a>
+
+                <a href="products.html" class="nav-link">
+                    <span>📦</span>
+                    Products
+                </a>
+
+                <a href="add-product.html" class="nav-link">
+                    <span>➕</span>
+                    Add Product
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="admin-profile">
+                    <div class="avatar">A</div>
+                    <div>
+                        <strong>Administrator</strong>
+                        <small>Admin account</small>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- Main content -->
+        <main class="main">
+
+            <!-- Top bar -->
+            <header class="topbar">
+
+                <button class="mobile-menu" onclick="toggleSidebar()">
+                    ☰
+                </button>
+
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Welcome back, Administrator.</p>
+                </div>
+
+                <div class="topbar-right">
+                    <div class="notification">🔔</div>
+                    <div class="avatar">A</div>
+                </div>
+
+            </header>
+
+
+            <!-- Landing section -->
+            <section class="hero">
+
+                <div class="hero-text">
+
+                    <span class="badge">ADMINISTRATOR PORTAL</span>
+
+                    <h2>
+                        Manage your
+                        <span>e-commerce store</span>
+                        with ease.
+                    </h2>
+
+                    <p>
+                        ShopAdmin gives you everything you need to manage
+                        your products, update prices, add new items and
+                        quickly find products in your store.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="products.html" class="btn btn-primary">
+                            View Products →
+                        </a>
+
+                        <a href="add-product.html" class="btn btn-secondary">
+                            + Add Product
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="hero-graphic">
+
+                    <div class="graphic-card">
+
+                        <div class="graphic-header">
+                            <span>Store Overview</span>
+                            <span>•••</span>
+                        </div>
+
+                        <div class="chart">
+                            <div class="chart-line"></div>
+
+                            <div class="chart-bars">
+                                <div style="height:35%"></div>
+                                <div style="height:55%"></div>
+                                <div style="height:42%"></div>
+                                <div style="height:70%"></div>
+                                <div style="height:60%"></div>
+                                <div style="height:90%"></div>
+                                <div style="height:75%"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Statistics -->
+            <section class="stats">
+
+                <div class="stat-card">
+                    <div class="stat-icon purple">📦</div>
+                    <div>
+                        <span>Total Products</span>
+                        <strong id="totalProducts">0</strong>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon green">💰</div>
+                    <div>
+                        <span>Store Value</span>
+                        <strong id="storeValue">$0</strong>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon orange">🏷️</div>
+                    <div>
+                        <span>Categories</span>
+                        <strong id="totalCategories">0</strong>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- About -->
+            <section class="content-card about">
+
+                <div>
+                    <span class="section-label">ABOUT SHOPADMIN</span>
+
+                    <h2>Your store, your control.</h2>
+
+                    <p>
+                        This administrator portal allows store managers
+                        to maintain their product catalogue from one
+                        convenient location.
+                    </p>
+
+                    <p>
+                        Add new products, change product details,
+                        update prices and search through your catalogue
+                        instantly.
+                    </p>
+                </div>
+
+                <div class="features">
+
+                    <div class="feature">
+                        <span>⚡</span>
+                        <div>
+                            <strong>Fast Management</strong>
+                            <p>Update products quickly.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <span>🔍</span>
+                        <div>
+                            <strong>Easy Search</strong>
+                            <p>Find products instantly.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <span>📱</span>
+                        <div>
+                            <strong>Responsive</strong>
+                            <p>Works on every device.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopAdmin - Products</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">S</div>
+            <span>ShopAdmin</span>
+        </div>
+
+        <nav>
+
+            <a href="index.html" class="nav-link">
+                <span>📊</span>
+                Dashboard
+            </a>
+
+            <a href="products.html" class="nav-link active">
+                <span>📦</span>
+                Products
+            </a>
+
+            <a href="add-product.html" class="nav-link">
+                <span>➕</span>
+                Add Product
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="admin-profile">
+
+                <div class="avatar">A</div>
+
+                <div>
+                    <strong>Administrator</strong>
+                    <small>Admin account</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main -->
+    <main class="main">
+
+        <header class="topbar">
+
+            <button class="mobile-menu" onclick="toggleSidebar()">
+                ☰
+            </button>
+
+            <div>
+                <h1>Products</h1>
+                <p>Manage your product catalogue.</p>
+            </div>
+
+            <a href="add-product.html" class="btn btn-primary">
+                + Add Product
+            </a>
+
+        </header>
+
+
+        <!-- Search -->
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <span>🔍</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search products by name or category..."
+                    oninput="searchProducts()"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- Product list -->
+        <section class="content-card">
+
+            <div class="table-header">
+
+                <div>
+                    <h2>Product Catalogue</h2>
+                    <p id="productCount">0 products</p>
+                </div>
+
+                <select id="categoryFilter" onchange="filterProducts()">
+
+                    <option value="all">All Categories</option>
+
+                </select>
+
+            </div>
+
+
+            <div id="productGrid" class="product-grid"></div>
+
+            <div id="noProducts" class="empty-state">
+
+                <div>📦</div>
+
+                <h3>No products found</h3>
+
+                <p>
+                    Try changing your search or add a new product.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- Edit Product Modal -->
+<div id="editModal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <div>
+                <h2>Edit Product</h2>
+                <p>Change the product information.</p>
+            </div>
+
+            <button class="close-btn" onclick="closeEditModal()">
+                ×
+            </button>
+
+        </div>
+
+
+        <form id="editForm">
+
+            <input type="hidden" id="editId">
+
+            <div class="form-group">
+
+                <label>Product Name</label>
+
+                <input
+                    type="text"
+                    id="editName"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Price ($)</label>
+
+                    <input
+                        type="number"
+                        id="editPrice"
+                        min="0"
+                        step="0.01"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Stock</label>
+
+                    <input
+                        type="number"
+                        id="editStock"
+                        min="0"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Category</label>
+
+                <input
+                    type="text"
+                    id="editCategory"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Description</label>
+
+                <textarea
+                    id="editDescription"
+                    rows="4"
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Image URL</label>
+
+                <input
+                    type="url"
+                    id="editImage"
+                >
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    onclick="closeEditModal()"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    Save Changes
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopAdmin - Add Product</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">S</div>
+
+            <span>ShopAdmin</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html" class="nav-link">
+                <span>📊</span>
+                Dashboard
+            </a>
+
+            <a href="products.html" class="nav-link">
+                <span>📦</span>
+                Products
+            </a>
+
+            <a href="add-product.html" class="nav-link active">
+                <span>➕</span>
+                Add Product
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="admin-profile">
+
+                <div class="avatar">A</div>
+
+                <div>
+                    <strong>Administrator</strong>
+                    <small>Admin account</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main -->
+    <main class="main">
+
+        <header class="topbar">
+
+            <button class="mobile-menu" onclick="toggleSidebar()">
+                ☰
+            </button>
+
+            <div>
+
+                <h1>Add Product</h1>
+
+                <p>
+                    Add a new product to your store.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <section class="content-card form-card">
+
+            <div class="form-title">
+
+                <span class="section-label">
+                    PRODUCT INFORMATION
+                </span>
+
+                <h2>Create a new product</h2>
+
+                <p>
+                    Fill in the information below to add a product.
+                </p>
+
+            </div>
+
+
+            <form id="addProductForm">
+
+
+                <!-- Product name -->
+                <div class="form-group">
+
+                    <label for="productName">
+                        Product Name *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="productName"
+                        placeholder="e.g. Wireless Headphones"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Price / stock -->
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="productPrice">
+                            Price ($) *
+                        </label>
+
+                        <input
+                            type="number"
+                            id="productPrice"
+                            placeholder="99.99"
+                            min="0"
+                            step="0.01"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="productStock">
+                            Stock *
+                        </label>
+
+                        <input
+                            type="number"
+                            id="productStock"
+                            placeholder="50"
+                            min="0"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Category -->
+                <div class="form-group">
+
+                    <label for="productCategory">
+                        Category *
+                    </label>
+
+                    <select id="productCategory" required>
+
+                        <option value="">
+                            Select a category
+                        </option>
+
+                        <option value="Electronics">
+                            Electronics
+                        </option>
+
+                        <option value="Clothing">
+                            Clothing
+                        </option>
+
+                        <option value="Home">
+                            Home
+                        </option>
+
+                        <option value="Accessories">
+                            Accessories
+                        </option>
+
+                        <option value="Sports">
+                            Sports
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Image -->
+                <div class="form-group">
+
+                    <label for="productImage">
+                        Product Image URL
+                    </label>
+
+                    <input
+                        type="url"
+                        id="productImage"
+                        placeholder="https://example.com/image.jpg"
+                    >
+
+                    <small>
+                        Add a URL to an image of your product.
+                    </small>
+
+                </div>
+
+
+                <!-- Description -->
+                <div class="form-group">
+
+                    <label for="productDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="productDescription"
+                        rows="6"
+                        placeholder="Describe your product..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Buttons -->
+                <div class="form-actions">
+
+                    <a
+                        href="products.html"
+                        class="btn btn-secondary"
+                    >
+                        Cancel
+                    </a>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Add Product
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+* }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --primary: #6c4df6;
+    --primary-dark: #5639dc;
+
+    --background: #f6f7fb;
+
+    --white: #ffffff;
+
+    --text: #1d1d2c;
+    --muted: #77788c;
+
+    --border: #e8e8ef;
+
+    --green: #21b573;
+    --orange: #f59e0b;
+
+    --sidebar: #171725;
+
+}
+
+
+body {
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+/* =========================
+   APP LAYOUT
+========================= */
+
+.app {
+
+    min-height: 100vh;
+
+    display: flex;
+
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+
+    width: 250px;
+
+    min-height: 100vh;
+
+    background: var(--sidebar);
+
+    color: white;
+
+    padding: 25px 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    bottom: 0;
+
+    z-index: 100;
+
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    padding: 0 10px;
+
+    margin-bottom: 45px;
+
+}
+
+
+.logo-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 10px;
+
+    background: var(--primary);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-weight: 800;
+
+}
+
+
+nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.nav-link {
+
+    padding: 13px 15px;
+
+    border-radius: 10px;
+
+    color: #a5a5b5;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+
+}
+
+
+.nav-link:hover {
+
+    background: #252537;
+
+    color: white;
+
+}
+
+
+.nav-link.active {
+
+    background: var(--primary);
+
+    color: white;
+
+}
+
+
+.sidebar-bottom {
+
+    margin-top: auto;
+
+}
+
+
+.admin-profile {
+
+    border-top: 1px solid #2d2d3d;
+
+    padding: 20px 8px 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.admin-profile strong {
+
+    display: block;
+
+    font-size: 13px;
+
+}
+
+
+.admin-profile small {
+
+    display: block;
+
+    color: #858596;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+
+}
+
+
+.avatar {
+
+    width: 36px;
+
+    height: 36px;
+
+    border-radius: 50%;
+
+    background: #d9d1ff;
+
+    color: #5d43dc;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main {
+
+    margin-left: 250px;
+
+    width: calc(100% - 250px);
+
+    padding: 35px;
+
+}
+
+
+.topbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.topbar h1 {
+
+    font-size: 27px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.topbar p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+}
+
+
+.topbar-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+
+.notification {
+
+    width: 40px;
+
+    height: 40px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.mobile-menu {
+
+    display: none;
+
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+
+    border: none;
+
+    border-radius: 9px;
+
+    padding: 12px 18px;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    transition: 0.2s;
+
+}
+
+
+.btn-primary {
+
+    background: var(--primary);
+
+    color: white;
+
+}
+
+
+.btn-primary:hover {
+
+    background: var(--primary-dark);
+
+    transform: translateY(-1px);
+
+}
+
+
+.btn-secondary {
+
+    background: white;
+
+    color: var(--text);
+
+    border: 1px solid var(--border);
+
+}
+
+
+.btn-secondary:hover {
+
+    background: #f8f8fb;
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    background: linear-gradient(
+        135deg,
+        #eeeaff,
+        #f8f7ff
+    );
+
+    border-radius: 18px;
+
+    padding: 45px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.8fr;
+
+    gap: 40px;
+
+    overflow: hidden;
+
+    margin-bottom: 25px;
+
+}
+
+
+.badge {
+
+    color: var(--primary);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+
+}
+
+
+.hero h2 {
+
+    font-size: 40px;
+
+    line-height: 1.15;
+
+    margin: 15px 0;
+
+    max-width: 600px;
+
+}
+
+
+.hero h2 span {
+
+    color: var(--primary);
+
+}
+
+
+.hero p {
+
+    color: var(--muted);
+
+    line-height: 1.7;
+
+    max-width: 580px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+}
+
+
+/* =========================
+   GRAPHIC
+========================= */
+
+.hero-graphic {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.graphic-card {
+
+    width: 100%;
+
+    max-width: 360px;
+
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 20px 50px rgba(50, 35, 120, 0.12);
+
+    transform: rotate(2deg);
+
+}
+
+
+.graphic-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-weight: 600;
+
+    font-size: 13px;
+
+}
+
+
+.chart {
+
+    height: 190px;
+
+    position: relative;
+
+    margin-top: 25px;
+
+}
+
+
+.chart-bars {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    right: 0;
+
+    height: 150px;
+
+    display: flex;
+
+    align-items: end;
+
+    gap: 10px;
+
+}
+
+
+.chart-bars div {
+
+    flex: 1;
+
+    background: linear-gradient(
+        to top,
+        #7559f7,
+        #a696ff
+    );
+
+    border-radius: 5px 5px 0 0;
+
+}
+
+
+.chart-line {
+
+    position: absolute;
+
+    width: 100%;
+
+    top: 35px;
+
+    border-top: 2px dashed #ddd6ff;
+
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.stat-card {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.stat-card span {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.stat-card strong {
+
+    font-size: 24px;
+
+}
+
+
+.stat-icon {
+
+    width: 46px;
+
+    height: 46px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.purple {
+
+    background: #eeeaff;
+
+}
+
+
+.green {
+
+    background: #e5f8f0;
+
+}
+
+
+.orange {
+
+    background: #fff2dc;
+
+}
+
+
+/* =========================
+   CONTENT CARD
+========================= */
+
+.content-card {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    padding: 28px;
+
+}
+
+
+.about {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+}
+
+
+.section-label {
+
+    color: var(--primary);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+
+.about h2 {
+
+    margin: 10px 0;
+
+    font-size: 25px;
+
+}
+
+
+.about p {
+
+    color: var(--muted);
+
+    line-height: 1.7;
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.features {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    justify-content: center;
+
+}
+
+
+.feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.feature > span {
+
+    width: 45px;
+
+    height: 45px;
+
+    background: #f2efff;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.feature strong {
+
+    font-size: 14px;
+
+}
+
+
+.feature p {
+
+    margin: 3px 0 0;
+
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-section {
+
+    margin-bottom: 20px;
+
+}
+
+
+.search-box {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    padding: 0 16px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.search-box input {
+
+    border: none;
+
+    outline: none;
+
+    width: 100%;
+
+    font-size: 14px;
+
+    color: var(--text);
+
+}
+
+
+/* =========================
+   TABLE HEADER
+========================= */
+
+.table-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.table-header h2 {
+
+    font-size: 19px;
+
+}
+
+
+.table-header p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-top: 5px;
+
+}
+
+
+.table-header select {
+
+    padding: 10px 14px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    background: white;
+
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.product-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.product-card {
+
+    border: 1px solid var(--border);
+
+    border-radius: 13px;
+
+    overflow: hidden;
+
+    background: white;
+
+    transition: 0.2s;
+
+}
+
+
+.product-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.07);
+
+}
+
+
+.product-image {
+
+    height: 190px;
+
+    background: #f4f4f8;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+.product-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.product-placeholder {
+
+    font-size: 50px;
+
+}
+
+
+.product-info { Portfolio}
